@@ -4,6 +4,7 @@
     Author     : lendle
 --%>
 
+<%@page import="lendle.courses.network.simplemvc.Student"%>
 <%@page import="lendle.courses.network.simplemvc.BankCustomer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,9 +15,11 @@
     </head>
     <body>
         <%
-            BankCustomer customer=(BankCustomer)request.getAttribute("customer");
+            Student student = (Student) request.getAttribute("student");
         %>
-        <h1>Hello, <%=customer.getFirstName()%></h1>
-        注意您的支出！
+        <h1>Hello, <%=student.getName()%></h1>
+        <h1>Your score: <%=student.getScore()%></h1>
+        <h1>what???</h1>
+    </body>
     </body>
 </html>
